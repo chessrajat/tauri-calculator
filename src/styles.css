@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .titlebar {
+        @apply select-none flex justify-between fixed top-0 left-0 right-0 h-8 bg-slate-900
+    }
+
+    .titlebar-button {
+        @apply inline-flex justify-center items-center h-8
+    }
+
+    .view-port {
+        height: calc(100vh - 32px);
+    }
+
+    .button-container {
+        height: calc(100vh - 215px);
+        @apply grid grid-cols-4 gap-1 mt-5 p-1
+    }
+
+    .calc-button{
+        @apply text-lg text-white h-full rounded-md overflow-hidden
+    }
+
+    .dark-button {
+        @apply bg-gray-800 hover:bg-gray-700
+    }
+
+    .light-button {
+        @apply bg-gray-700 hover:bg-gray-800
+    }
+
+    .btn-clicked {
+        @apply bg-slate-950
+    }
+
+
+}
+
+span.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 300ms linear;
+    background-color: rgba(32, 15, 15, 0.7);
+  }
+  @keyframes ripple {
+    to {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+  }
